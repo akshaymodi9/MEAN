@@ -1,0 +1,17 @@
+.row.display-flex{
+    display:flex;
+    flex-wrap:wrap;
+}
+.thumbnail{
+    height:100%;
+}
+.eventtitle{
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.highlight{
+    color:black;
+    background-color:yellow; 
+}

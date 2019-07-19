@@ -1,0 +1,44 @@
+<!doctype html>
+    <html>
+        <head>
+
+        </head>
+        <body>
+            <h1> Fisrt header </h1>
+            <script>
+               
+                var name='Pralhad Yadav';
+                var isvalid=true;
+                var mobile=21548542;
+                var items=['apple','orange','grapes'];
+                var person={
+                            firstname:'ajay',
+                            lastname:'kumar',
+                            age:25,
+                            dob:new Date(1994,8,23)
+                    }
+                var nothing;
+                 person.salary=25000;
+                var jsonstr=JSON.stringify(person);
+                document.write(jsonstr);
+
+                items.push("mango");
+                items.splice(1,1);
+                /*var person2=JSON.parse(jsonstr);
+                document.write(typeof person2);    
+                */    
+                   
+
+                    /*console.log("value of name: "+ name +" , type is "+typeof name);
+                    console.log("<br/> value of isValid: "+ isvalid +" , type is "+typeof isvalid);
+                    console.log("<br/> value of mobile: "+ mobile +" , type is "+typeof mobile);
+                    document.write("<br/> value of items: "+ items +" , type is "+typeof items+" <br/>Length of items is " + items.length);
+                    console.log("<br/> value of person: "+ JSON.stringify(person) +" , type is "+typeof person);
+                    console.log("<br/> value of nothing: "+ nothing +" , type is "+typeof nothing);*/
+                    console.log("<br/> value of items: ", items)
+
+            </script>    
+
+        </body>
+
+    </html>

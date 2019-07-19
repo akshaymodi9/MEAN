@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+
+<head>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                        aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span >
+                    </button>
+                    <a class="navbar-brand" href="login.html">LTI</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">About Us <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        
+                    </ul>
+                   
+                    <ul class="nav navbar-nav navbar-right">
+                        
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> My Account <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Profile</a></li>
+                                <li><a href="#">Setting</a></li>
+                                <li><a href="#">Change Password</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+        <div class="row">
+            <div class="col-md-8 col-lg-6 col-lg-offset-3 col-md-offset-3">
+                <form method="POST">
+                    <h1>Login</h1><br/>
+                    <div class="input-group form-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input id="name" type="text" class="form-control" placeholder="username" />
+                    </div>
+                    <div id="nameerr"></div>
+
+                    <div class="input-group form-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                        <input id="pass" type="password" class="form-control" placeholder="password" />
+                    </div>
+                    <div id="passerr"></div>
+
+                    <div class="form-group">
+                        <button type="submit" id="btn" onclick="validate(event)" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-lock" >
+                            Login
+                        </span> 
+                        </button>
+                        <a href="register.html"> <button type="button" id="btn1" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-triangle-right" > 
+                            Register </button></a>
+                        </span>
+                    </div>
+                    <div id="err" class="alert alert-danger" style="visibility:hidden"></div>
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="js/myscript.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

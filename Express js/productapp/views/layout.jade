@@ -1,0 +1,32 @@
+doctype
+html
+    head
+        title Product Details
+        link(rel="stylesheet", href="/bootstrap/bootstrap.css")
+    body
+        .container  
+            .navbar.navbar-inverse
+                .container
+                    .navbar-header
+                        a.navbar-brand(href="/")="Products"
+                
+                .menu
+
+                    ul.nav.nav-pills
+                        li
+                            a(href="/") Home
+                        li 
+                            a(href="/product/viewall") View Products
+                        li 
+                            a(href="/product/viewelectronics") Electronic Products
+                        li 
+                            a(href="/product/viewfurniture") Furniture Products
+                        li  
+                          form(action="/product/search" method="post")
+                            input(type="text", name="name")
+                            input(type="submit", value="Search")
+                       
+
+            block content
+
+     

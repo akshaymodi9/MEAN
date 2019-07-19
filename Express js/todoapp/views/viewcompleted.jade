@@ -1,0 +1,22 @@
+extend layout
+
+
+block content
+    .container
+        table.table.table-striped.table-bordered
+            thead
+                tr
+                    td Task
+                    td Description
+                    td Status
+        
+
+            tbody
+                each x in task
+                    tr 
+                    
+                        td #{x.taskname}
+                        td #{x.description}
+                        td #{x.status}
+                  
+                      

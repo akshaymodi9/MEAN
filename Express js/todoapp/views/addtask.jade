@@ -1,0 +1,24 @@
+extend layout
+
+block content 
+    div
+        .container
+            div.action
+                .main.conatiner
+                    .row    
+                        .col-md-6.col-md-offset-3
+                            form(method="post" action="")
+                                div.form-group
+                                    label(for=name) Task NAme
+                                    input.form-control(type="text",name="taskname")
+
+                                div.form-group
+                                    label(for=description) Description
+                                    input.form-control(type="text",name="description")
+
+                                div.form-group
+                                    label(for=status) Status
+                                    input.form-control(type="text",name="status")
+
+                                div
+                                    button.btn.btn-primary(type="submit") Add

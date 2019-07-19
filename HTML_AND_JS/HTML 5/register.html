@@ -1,0 +1,82 @@
+<!doctype HTML>
+<html>
+    <head>
+        <title>First Html Page</title>
+        <link href="styles/style.css" rel="stylesheet"/>
+    </head>
+<body>
+<header id="header">
+        This is my first page.
+</header>
+    <nav id="navbar">
+        <a href="about.html">About</a> |
+        <a href="contact.html"> contact </a> |
+        <a href="Careers.html"> careers </a>
+     </nav>
+    
+    <section id="content">
+      
+        <form method="post" action="register" novalidate>
+            <table class="tbl">
+
+                <tr>
+                    <th colspan="2" > Register here </th>
+                </tr>
+                <tr>
+                    <td> Full name </td>
+                    <td> <input type="text" placeholder="Name" required maxlength="50" minlength="3"></td> 
+                </tr>
+                <tr>
+                    <td> Email </td>
+                    <td> <input type="email" placeholder="Email id" required maxlength="100" minlength="3"></td>               
+                </tr>
+                <tr>
+                    <td> Password </td>
+                    <td> <input type="password" placeholder="Password" required maxlength="20" minlength="8" pattern="\w[a-z][A=Z][0-9][!@#$%^&*()_-]\"></td>                     
+                </tr>
+                
+                <tr>
+                    <td> Age </td>
+                    <td> <input type="number" placeholder="Age" required max="20" min="8"></td>                     
+                </tr>
+                <tr>
+                    <td> DOB </td>
+                    <td> <input type="date" placeholder="DOB" ></td>                     
+                </tr>
+                <tr>
+                    <td> Salary </td>
+                    <td> 5000 <input type="range" min="5000" max="20000" > 20000 </td>                     
+                </tr>
+                <tr>
+                    <td> fav color </td>
+                    <td> <input type="color" ></td>                     
+                </tr>
+                <tr>
+                    <td> Website URL </td>
+                    <td> <input type="URL" ></td>                     
+                </tr>
+                <tr>
+                    <td> Search </td>
+                    <td> <input type="search" ></td>                     
+                </tr>
+                <tr>
+                    <th colspan="2">
+                    <button type="submit"> Register </button>
+                    <button type="submit" formmethod="get"> Register2 </button> 
+                    <button type="reset" > Clear </button>   
+                </tr>
+            </table>      
+        </form>   
+
+    </section>
+<footer id="footer">
+        <a href="Policies.html">Company policy</a> |
+        <a href="Admin.html"> Administration </a> 
+        <p>
+        &copy; Copyright reserved 2017
+        </p>
+</footer>
+
+
+</body>
+</html>

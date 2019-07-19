@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+    //function 
+   var person={};
+    function setData(name,age,salary=100000){
+
+     person.name=name;
+     person.age=age;
+
+    //old approach //if(typeof(salary)==="undefined")
+     //person.salary=10000;
+     //else
+     person.salary=salary;
+
+
+    }
+
+function printPerson(){
+
+    console.log(person);
+}
+        
+
+        setData("ganesh",25,13215464);
+        printPerson();
+        </Script>
+
+</body>
+
+</html>

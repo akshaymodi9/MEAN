@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        //OOPS classes and objects
+
+        class Employee {
+            constructor(name, age, salary, dept) {
+                this.name = name;
+                this.age = age;
+                this.salary = salary;
+                this.dept = dept;
+            }
+
+            print() {
+                document.write("</br> Name: " + this.name);
+                document.write("</br> age: " + this.age);
+                document.write("</br> salary: " + this.salary);
+                document.write("</br> dept: " + this.dept);
+
+            }
+              set employeeId(id){
+            this.id=id;
+        }
+        get employeeId(){
+            return this.id;
+        }
+
+
+        }
+        var emp = new Employee("ajay", 25, 123456, "IT")
+        emp.print();
+        emp.employeeId=101;
+        document.write("</br> Employee id: "+emp.employeeId);
+
+      
+
+    </Script>
+
+</body>
+
+</html>

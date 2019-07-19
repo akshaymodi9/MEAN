@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        //collections
+
+        var map = new Map();
+
+        map.set("ajay", 6546541146);
+        map.set("kishore", 3541116);
+        map.set("praveen", 5431231);
+        map.set("lokesh", 54113484);
+
+        document.write("</br> map size " + map.size);
+
+        var num = map.get("praveen");
+        document.write("</br>number of praveen " + num);
+
+        /*map.forEach(function(item,key,map){
+
+        document.write("</br> "+key+" "+item);
+        })
+*/
+        map.forEach((item,key,map)=>{
+
+            document.write("</br> "+key+" "+item)
+        });
+
+        document.write("</br> kishore exist " +map.has("kishore"));
+
+        map.delete("kishore");//remove single item
+
+        map.clear();//remove all item
+    </Script>
+
+</body>
+
+</html>

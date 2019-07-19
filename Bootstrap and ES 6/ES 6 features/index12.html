@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        //destructuring assignments
+        var num = [1, 2, 3, 4, 5];
+
+        //ES5
+        /*var first= num[0];
+        var third=num[2];
+        var fifth=num[4];
+*/
+        //      document.write(first+" "+third+ " " +fifth);
+
+        /* var a=5,b=6;
+         var tmp=a;  set.add("apple");
+          set.forEach((item)=>{
+            document.write("</br> "+item);
+        })
+         a=b;
+         b=a;
+       */
+
+        //ES6
+
+        var first, third, fifth;
+        [first, , third, , fifth] = num;
+        document.write(first + " " + third + " " + fifth);
+var a=5,b=6;
+
+document.write("</br>before swap"+a+" "+b);
+[a,b]=[b,a];
+document.write("</br>after swap"+a+" "+b);
+    </Script>
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+    
+    var names=["kumar","ajay","sunil","lokesh"];
+
+   //ES5
+   function showDetails(name,contacts){
+       document.write("</br>name ="+name);
+       for(var i in contacts){
+        document.write( "</br>no: "+contacts[i]); 
+       }
+   }
+
+showDetails("harsh",[465414,6464654]);
+showDetails("ganesh",[4446434164,4464644,41634]);
+showDetails("hello");
+
+//ES6
+
+function displayData(name,...contacts){
+
+document.write("</br>name: " +name);
+
+for(let contact of contacts)
+{
+    document.write("</br>contact :" +contact)
+}
+
+}
+
+displayData("harsh",465414,6464654);
+displayData("sdfdf",465414,6464654,131311);
+
+ </Script>
+
+</body>
+
+</html>

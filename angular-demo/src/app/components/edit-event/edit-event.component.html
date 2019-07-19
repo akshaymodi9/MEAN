@@ -1,0 +1,108 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+
+    <form class="form-horizontal" [formGroup]="form" (submit)="update(form)">
+
+      <h2> Edit Event</h2>
+      <div class="form-group">
+        <label class="control-label col-md-3">Title</label>
+        <div class="col-md-9">
+          <input type="text" class="form-control" name="title" formControlName="title" />
+          <div class="text-danger" *ngIf="form.controls.title.touched || form.controls.title.dirty">
+            <div [hidden]="!form.controls.title.hasError('required')">Title is requied</div>
+            <div [hidden]="!form.controls.title.hasError('minlength')">Minimum 5 characters</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-md-3">Location</label>
+        <div class="col-md-9">
+          <input type="text" class="form-control" name="location" formControlName="location" />
+          <div class="text-danger" *ngIf="form.controls.location.touched || form.controls.location.dirty">
+            <div [hidden]="!form.controls.location.hasError('required')">Location is requied</div>
+            <div [hidden]="!form.controls.location.hasError('minlength')">Minimum 5 characters</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-md-3">Start Time</label>
+        <div class="col-md-9">
+          <input type="text" class="form-control" name="startTime" formControlName="startTime" />
+          <div class="text-danger" *ngIf="form.controls.startTime.touched || form.controls.startTime.dirty">
+            <div [hidden]="!form.controls.startTime.hasError('required')">Start time is requied</div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-md-3">End Time</label>
+        <div class="col-md-9">
+          <input type="text" class="form-control" name="endTime" formControlName="endTime" />
+          <div class="text-danger" *ngIf="form.controls.endTime.touched || form.controls.endTime.dirty">
+            <div [hidden]="!form.controls.endTime.hasError('required')">endTime is requied</div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-md-3">Event Date</label>
+        <div class="col-md-9">
+          <input type="date" class="form-control" name="eventDate" formControlName="eventDate" />
+          <div class="text-danger" *ngIf="form.controls.eventDate.touched || form.controls.eventDate.dirty">
+            <div [hidden]="!form.controls.eventDate.hasError('required')">eventDate is requied</div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-md-3">Speaker</label>
+        <div class="col-md-9">
+          <textarea class="form-control" name="speakers" formControlName="speakers"></textarea>
+
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-md-3">Price</label>
+        <div class="col-md-9 ">
+          <input type="number" class="form-control" name="number" formControlName="price" />
+          <div class="text-danger" *ngIf="form.controls.price.touched || form.controls.price.dirty">
+            <div [hidden]="!form.controls.price.hasError('required')">price is requied</div>
+            <div [hidden]="!form.controls.price.hasError('min')">Minimum is 1000</div>
+            <div [hidden]="!form.controls.price.hasError('max')">Maximum is 5000</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-md-3">Offer Price</label>
+        <div class="col-md-9">
+          <input type="number" class="form-control" name="offerPrice" formControlName="offerPrice" />
+          <div class="text-danger" *ngIf="form.controls.offerPrice.touched || form.controls.offerPrice.dirty">
+            <div [hidden]="!form.controls.offerPrice.hasError('required')">Offer price is requied</div>
+            <div [hidden]="!form.controls.offerPrice.hasError('min')">Minimum is 1000</div>
+            <div [hidden]="!form.controls.offerPrice.hasError('max')">Maximum is 5000</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-md-9 col-md-offset-3">
+          <button type="submit" class="btn btn-primary" name="save">
+                <span class="glyphicon glyphicon-save">Save</span>
+            </button>
+        </div>
+      </div>
+      <div>
+        title:{{form.controls.title.touched}}<br/> title dirty:{{form.controls.title.dirty}}<br/> title error:{{form.controls.title.hasError('required')}}<br/>        title error-minlength:{{form.controls.title.hasError('minlength')}}
+      </div>
+
+
+    </form>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<h2 [ngStyle]="{'color':colorName}">Contact Home </h2>
+<p> My name is {{name}} and I am working in {{company}}</p>
+<p>I am working in<span>{{department}}</span> </p>
+<p *ngIf="department==='Training'">
+    Happy Teachers day </p>
+<ul>
+    <li *ngFor="let c of courses">
+        {{c}}
+    </li>
+
+</ul>
+
+<button type="button" id="btn" (click)="showData()">Update</button>
+
+<hr/>
+<label for="txtColor">Color</label>
+<input type="text" name="txtColor" #colorText (keyup)="changeColor(colorText)"/>
+
+<button (click)="changeColor(colorText)">Change style</button>

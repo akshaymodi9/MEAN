@@ -1,0 +1,120 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+
+    <form class="form-horizontal" #form="ngForm" (submit)="save(form)">
+      <div class="alert" [ngClass]="{'alert-danger':form.invalid,'alert-success':form.valid}" *ngIf="clicked===true && status.message">
+        <span>{{status.message}}</span>
+      </div>
+      <h2> New Event</h2>
+      <div class="form-group">
+        <label class="control-label col-md-3">Title</label>
+        <div class="col-md-9">
+          <input type="text" class="form-control" name="title" required minlength="5" (keyup)="reset()" [(ngModel)]="eventInfo.title" #title="ngModel"
+          />
+          <div *ngIf="title.errors && (title.dirty||title.touched)">
+            <div [hidden]="!title.errors.required" class="text-danger"> Title is required </div>
+            <div [hidden]="!title.errors.minlength" class="text-danger"> Title should be of 5 characters </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-md-3">Location</label>
+        <div class="col-md-9">
+          <input type="text" class="form-control" name="location" required (keyup)="reset()" [(ngModel)]="eventInfo.location" #location="ngModel" />
+          <div *ngIf="location.errors && (location.dirty||location.touched)">
+            <div [hidden]="!location.errors.required" class="text-danger"> location is required </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-md-3">Start Time</label>
+        <div class="col-md-9">
+          <input type="text" class="form-control" name="startTime" (keyup)="reset()" required [(ngModel)]="eventInfo.startTime" #startTime="ngModel"
+          />
+          <div *ngIf="startTime.errors && (startTime.dirty||startTime.touched)">
+            <div [hidden]="!startTime.errors.required" class="text-danger"> startTime is required </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-md-3">End Time</label>
+        <div class="col-md-9">
+          <input type="text" class="form-control" name="endTime"  (keyup)="reset()" required [(ngModel)]="eventInfo.endTime" #endTime="ngModel" />
+          <div *ngIf="endTime.errors && (endTime.dirty||endTime.touched)">
+            <div [hidden]="!endTime.errors.required" class="text-danger"> endTime is required </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-md-3">Event Date</label>
+        <div class="col-md-9">
+          <input type="date" class="form-control" name="eventDate" (change)="reset()" required [(ngModel)]="eventInfo.eventDate" #eventDate="ngModel"
+          />
+          <div *ngIf="eventDate.errors && (eventDate.dirty||eventDate.touched)">
+            <div [hidden]="!eventDate.errors.required" class="text-danger"> eventDate is required </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-md-3">Speaker</label>
+        <div class="col-md-9">
+          <textarea class="form-control" name="speakers" (keyup)="reset()" required [(ngModel)]="tmp_speakers" #speakers="ngModel"></textarea>
+          <div *ngIf="speakers.errors && (speakers.dirty||speakers.touched)">
+            <div [hidden]="!speakers.errors.required" class="text-danger"> speakers is required </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-md-3">Price</label>
+        <div class="col-md-9 ">
+          <input type="number" class="form-control" name="number" (keyup)="reset()" required min="1000" max="5000" [(ngModel)]="eventInfo.price" #price="ngModel"
+          />
+          <div *ngIf="price.errors && (price.dirty||price.touched)">
+            <div [hidden]="!price.errors.required" class="text-danger"> price is required </div>
+            <div [hidden]="!price.errors.min" class="text-danger"> min price 1000</div>
+            <div [hidden]="!price.errors.max" class="text-danger"> Max price 5000</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-md-3">Offer Price</label>
+        <div class="col-md-9">
+          <input type="number" class="form-control" name="offerPrice" (keyup)="reset()"  required min="500" max="5000" [(ngModel)]="eventInfo.offerPrice"
+            #offerPrice="ngModel" />
+          <div *ngIf="offerPrice.errors && (offerPrice.dirty||offerPrice.touched)">
+            <div [hidden]="!offerPrice.errors.required" class="text-danger"> offerPrice is required </div>
+            <div [hidden]="!offerPrice.errors.min" class="text-danger"> offerPrice price 1000</div>
+            <div [hidden]="!offerPrice.errors.max" class="text-danger"> offerPrice price 5000</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-md-9 col-md-offset-3">
+          <button type="submit" class="btn btn-primary" name="save">
+              <span class="glyphicon glyphicon-save">Save</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- <div hidden>
+        title touched:{{title.touched}},title untouched:{{title.untouched}}, title dirty: {{title.dirty}}, title invalid:{{title.invalid}},
+        title Valid:{{title.valid}}<br/> {{price.errors|json}}
+      </div> -->
+
+    </form>
+  </div>
+</div>

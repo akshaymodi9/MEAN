@@ -1,0 +1,14 @@
+<div class="col-md-6 col-md-offset-3">
+<h3>Login</h3>
+<form class="form form-horizontal" >
+
+  <div class="form-goup">
+    <div class="form-control">
+      <input type="text" placeholder="username" #username/>
+      <input type="password" placeholder="password" #password/>
+      <button type="button" (click)="save(username.value,password.value)">submit</button>
+    </div>
+  </div>
+</form>
+
+</div>

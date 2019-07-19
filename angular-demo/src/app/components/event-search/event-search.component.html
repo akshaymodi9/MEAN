@@ -1,0 +1,18 @@
+
+<h2>Upcoming events</h2>
+
+<label for="txtSearch">Seach</label>
+<input type="text" #location  />
+<button (click)="search(location)">Search</button>
+
+
+<div class="row" *ngIf="searchResult.length>0">
+  <div class="col-lg-12"> <h3> Search Result </h3></div>
+</div>
+
+<div class="row">
+  <div class="col-sm-3" *ngFor="let ev of searchResult">
+    <event-thumbnil [eventdata]="ev">
+    </event-thumbnil>      
+    </div>
+</div>    

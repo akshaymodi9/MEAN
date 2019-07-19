@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+    
+    var fruits=["apples","grapes","pear","banana"];
+
+    var vegetables=["potato","onion","brinjal","ladyfinger"];
+
+var items=[];
+
+//ES5
+/*for(var i in fruits){
+
+    items.push(fruits[i]);
+}
+for(var i in vegetables){
+
+    items.push(vegetables[i]);
+}
+   document.write(items);
+*/
+//ES6
+//spread opeerator
+   items=[...fruits,...vegetables];
+      document.write(items);
+
+
+var string="Synergetics india pvt ltd ";
+var chargs=[...string];
+document.write(chargs);
+ </Script>
+
+</body>
+
+</html>

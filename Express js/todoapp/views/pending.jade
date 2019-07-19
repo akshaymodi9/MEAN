@@ -1,0 +1,23 @@
+extend layout
+
+
+block content
+    .container
+        table.table.table-striped.table-bordered
+            thead
+                tr
+                    td Task
+                    td Description
+                    td Status
+                    td
+
+            tbody
+                each x in task
+                    tr 
+                    
+                        td #{x.taskname}
+                        td #{x.description}
+                        td #{x.status}
+                        td 
+                         form(action="/task/pending/#{x._id}    " method="post")
+                            input(type="submit", class="btn btn-xs btn-info" value="Mark as complete")

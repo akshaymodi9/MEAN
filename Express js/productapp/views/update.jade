@@ -1,0 +1,32 @@
+extend layout
+
+
+
+block content
+        .container
+            table.table.table-striped.table-bordered
+                thead
+                    tr
+                        td Name
+                        td Cost
+                        td Description
+                        td Category
+                        td 
+                        
+
+                tbodyundefined
+                    
+                        tr 
+                           form(action="/product/update", method="post")
+                            td 
+                                input(type="hidden" name="id" value="#{doc._id}" )
+                                input(type="text" name="name1" value="#{doc.name}" readonly="ro")
+                            td 
+                                input(type="text" name="cost1" value="#{doc.cost}")
+                            td 
+                                input(type="text" name="description1" value="#{doc.description}")
+                            td 
+                                input(type="text" name="category" value="#{doc.category}" readonly="ro")
+                            td 
+                                 input(type="submit", name="update" class="btn btn-xs btn-primary" value="update")
+                              

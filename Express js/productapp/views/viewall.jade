@@ -1,0 +1,27 @@
+extend layout
+
+
+
+block content
+        .container
+            table.table.table-striped.table-bordered
+                thead
+                    tr
+                        td Name
+                        td Cost
+                        td Description
+                        td Category
+                        td
+
+                tbodyundefined
+                    each pr in product
+                        tr 
+                        
+                            td #{pr.name}
+                            td #{pr.cost}
+                            td #{pr.description}
+                            td #{pr.category}
+                            td 
+                              form(action="/product/edit/#{pr._id}", method="post")
+                                input(type="submit",class="btn btn-xs btn-danger" name="delete" value="delete")
+                                input(type="submit",class="btn btn-xs btn-info" name="edit" value="edit")

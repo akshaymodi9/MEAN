@@ -1,0 +1,19 @@
+{
+  "name": "movierestapi",
+  "version": "1.0.0",
+  "description": "This will expose the movie app for angular and react",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "mongoose": "^4.11.10"
+  },
+  "devDependencies": {
+    "gulp-print": "^2.0.1"
+  }
+}

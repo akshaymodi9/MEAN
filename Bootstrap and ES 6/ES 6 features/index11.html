@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+           //collections
+ 
+        var set=new Set();
+        set.add("apple");
+        set.add("orange");
+        set.add("grapes");
+        set.add("kiwi");
+        set.add("mangoes");
+
+        set.forEach((item)=>{
+            document.write("</br> "+item);
+        })
+
+     
+
+
+       var exist = set.has("grapes");
+       document.write("</br>"+exist);
+        set.delete("kiwi");
+    
+       set.clear();
+    
+
+
+    </Script>
+
+</body>
+
+</html>

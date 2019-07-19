@@ -1,0 +1,16 @@
+
+.tbl{
+                width: 50%;
+                font-size: 15px;
+                 
+                margin: 0 auto;
+
+         }
+
+         h2{
+             color: red;
+         }
+
+         .error{
+             color: red;
+         }

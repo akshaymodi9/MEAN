@@ -1,0 +1,16 @@
+
+
+#wrapper{
+    color:rebeccapurple;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px
+}
+
+#data{
+
+    color: red;
+    margin: 10px 0;
+}
+.highlight{
+    background: #F47031
+}

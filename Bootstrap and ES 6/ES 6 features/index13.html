@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        //i18n, internationalization
+
+        var num = 123456456;
+
+        var us = new Intl.NumberFormat("en-US");
+        document.write("</br>number is " + us.format(num));
+
+        var indian = new Intl.NumberFormat("hi-IN");
+        document.write("</br>number is " + indian.format(num));
+
+        //currency format
+        var price = 123546874541;
+        var dollar = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" });
+        document.write("</br>currency is " + dollar.format(price));
+        var rupee = new Intl.NumberFormat("hi-IN", { style: "currency", currency: "INR" });
+        document.write("</br>currency is " + rupee.format(price));
+
+        var usdate=new Intl.DateTimeFormat("en-US");
+        var today=new Date();
+        document.write("</br>Today is "+usdate.format(today));
+        var indate=new Intl.DateTimeFormat("hi-IN");
+         document.write("</br>Today is "+indate.format(today));
+    </Script>
+
+</body>
+
+</html>

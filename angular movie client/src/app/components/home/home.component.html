@@ -1,0 +1,8 @@
+<table class="table table-bordered table-striped">
+<tr *ngFor="let movie of moviesObsvr|async">
+    <td>{{movie.title}}</td>
+    <td>{{movie.year}}</td>
+    <td><a [routerLink]="['/edit',movie._id]">Edit</a></td>
+    <td><a [routerLink]="['/delete',movie._id]">Delete</a></td>
+
+</table>

@@ -1,0 +1,45 @@
+extend layout
+
+block content
+
+    .menu
+        ul.nav.nav-pills
+            li.active
+                a(href="/boot_home") Home
+
+            li 
+                a(href="/viewMovies") View Movies
+            
+            li 
+                a(href="/addMovies") Add Movies
+
+            li 
+                a(href="/searchMovies") Search Movies
+
+    .div    
+        .container
+            .action
+                h1 Welcome to Home page
+                p   #{title}
+
+                ul
+                    each movie in movies
+                        li #{movie.name}
+
+                br
+                br
+            div
+
+                table.table.table-striped.table-bordered
+                    thead
+                        tr  
+                            td Name
+                            td Actor
+
+                    tbody
+                        each movie in movies
+                            tr
+                                td #{movie.name}
+                                td #{movie.actor}
+
+

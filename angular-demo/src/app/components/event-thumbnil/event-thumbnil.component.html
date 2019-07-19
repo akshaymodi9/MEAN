@@ -1,0 +1,16 @@
+
+<div class="thumbnail" [ngSwitch]="eventdata.location">
+    <h3 class="eventtitle" 
+    [ngClass]="{'highlight':eventdata.location==='Mumbai'}" title={{eventdata.title}}>
+      {{i}}{{eventdata.title|titlecase}}</h3>
+    <p class="text-danger" *ngSwitchCase="'Mumbai'">Location:{{eventdata.location|uppercase}}</p>
+    <p class="text-primary" *ngSwitchCase="'Banglore'">Location:{{eventdata.location|uppercase}}</p>
+    <p class="text-warning" *ngSwitchCase="'Pune'">Location:{{eventdata.location|uppercase}}</p>
+    <p class="text-success" *ngSwitchCase="'Chennai'">Location:{{eventdata.location|uppercase}}</p>
+    <p  *ngSwitchDefault>Location:{{eventdata.location|uppercase}}</p>
+    
+    <p>Date:{{eventdata.eventDate|date:'dd/MMM/yyyy'}}</p>
+    <p>Time:{{eventdata.startTime}} - {{eventdata.endTime}}</p>
+    <p>Fee:{{eventdata.price|currency:"INR":true:"1.2-5"}}</p>
+    <p><a [routerLink]="['/edit',eventdata.id]">Edit</a></p>
+  </div>

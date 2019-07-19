@@ -1,0 +1,32 @@
+<!doctype html>
+    <html>
+        <head>
+
+        </head>
+        <body>
+
+            <script>
+                var items=['apple','orange','grapes','mango'];
+
+                for(var i=0;i<items.length;i++)
+                {document.write("</br>"+items[i]);
+     
+                }
+
+                for(var i in items)
+                document.write("<br/> value of i = "+ i + ", element is " +items[i]);
+              
+                for(var i of items)
+                document.write("<br/> value of i "+i);
+
+                var data=5;
+                var data2="5";
+
+                document.write(data==data2);
+                document.write(data===data2);
+                
+            </script>
+
+        </body>
+
+    </html>

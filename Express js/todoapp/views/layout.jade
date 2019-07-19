@@ -1,0 +1,33 @@
+doctype
+html
+    head 
+        title= Tasks
+        link(rel="stylesheet",href="/bootstrap/bootstrap.css")
+    body 
+        .container  
+            .navbar.navbar-default
+                .container
+                    .navbar-header
+                        a.navbar-brand(href="/")=" Tasks"
+                
+                .menu
+
+                    ul.nav.nav-pills
+                        li
+                            a(href="/") Home
+                        li 
+                            a(href="/task/viewtask") View Task
+                        li 
+                            a(href="/task/addtask") Add Task
+                        li 
+                            a(href="/task/viewcompleted") Completed Task
+                        li 
+                            a(href="/task/pending") Not Completed
+                       
+
+                block content
+
+
+
+
+    

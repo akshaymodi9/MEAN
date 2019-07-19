@@ -1,0 +1,22 @@
+extend layout
+
+
+block content
+    .container
+        table.table.table-striped.table-bordered
+            thead
+                tr
+                    td Name
+                    td Cost
+                    td Category
+                    td Brand
+                    td Availability
+            tbody
+                each data in details
+                    tr 
+                    
+                        td #{data.name}
+                        td #{data.cost}
+                        td #{data.category}
+                        td #{data.brand}
+                        td #{data.avail}

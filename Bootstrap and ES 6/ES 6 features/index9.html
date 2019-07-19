@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        //arrow functions
+
+        //ES5
+        function add(num1, num2) {
+            return num1 + num2;
+
+        }
+
+        var subtract = function (num1, num2) {
+            return num1 - num2;
+        }
+
+        document.write("</br>5+5 is " + add(5, 5));
+        document.write("</br> 14-6 is " + subtract(14, 6));
+
+        //ES6
+
+        var multiply = (num1, num2) => num1 * num2;
+        var divide = (num1, num2) => num1 / num2;
+
+        document.write("</br>5*5 is " + multiply(5, 5));
+        document.write("</br> 14/6 is " + divide(14, 6));
+
+        var getDate = () => new Date();
+        document.write("</br>" + getDate());
+        var showInfo = (name, loc, company) => {
+
+            var msg = `</br>name is ${name} aND Location is ${loc} and company ${company}`;
+
+
+            document.write(msg);
+        }
+
+        var getSmall = (x, y) => {
+
+            if (x < y)
+                return x;
+            else
+                return y;
+        }
+        document.write("</br>Small number between 7 & 8 is " + getSmall(7, 8));
+         showInfo("abc", "mumbai", "xyz");
+    </Script>
+
+</body>
+
+</html>

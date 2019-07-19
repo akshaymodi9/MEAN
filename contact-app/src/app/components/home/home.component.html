@@ -1,0 +1,14 @@
+<h2>Contacts</h2>
+
+<table class="table tabel-primary table-bordered table-striped">
+    <tr>
+        <td>Name</td>
+        <td>Number</td>
+    </tr>
+
+    <tr *ngFor="let cnt of contacts">
+        <td>{{cnt.name}}</td>
+        <td>{{cnt.no}}</td>
+    </tr>
+
+</table>
